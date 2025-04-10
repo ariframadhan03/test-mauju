@@ -5,14 +5,14 @@ import { AxiosError } from "axios";
 import { toast } from "sonner";
 import Cookies from "universal-cookie";
 
-const useLogin = () => {
-  const url: string = "/login";
+const useRegister = () => {
+  const url: string = "/register";
   const navigate = useNavigate();
   const cookies = new Cookies();
 
   return useMutation({
     mutationKey: ["login"],
-    mutationFn: async (paylod: ILoginPayload) => {
+    mutationFn: async (paylod: IRegisterPayload) => {
       return await axiosInstance.post(url, paylod);
     },
     onSuccess: (data) => {
@@ -25,4 +25,4 @@ const useLogin = () => {
   });
 };
 
-export default useLogin;
+export default useRegister;
