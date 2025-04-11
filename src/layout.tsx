@@ -1,10 +1,30 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Layout = () => {
+  const navgate = useNavigate();
+
+  const goToProfile = () => {
+    navgate("/profile");
+  };
+
+  const goToDashboard = () => {
+    navgate("/dashboard");
+  };
+
   return (
     <div>
-      <div className="h-16 bg-[#0571E1] flex justify-end">
-        <div className="flex gap-1 pl-1 pr-[2rem] sm:pl-2 sm:pr-[3rem] md:pl-4 md:pr-[5rem] lg:pl-6 lg:pr-[7rem] cursor-pointer sm:border-l-[1px] sm:border-gray-100">
+      <div className="h-16 bg-[#0571E1] flex justify-between  px-[2rem] sm:px-[3rem] md:px-[5rem] lg:px-[7rem]">
+        <p
+          className="text-white my-auto cursor-pointer"
+          onClick={goToDashboard}
+        >
+          Dashboard
+        </p>
+
+        <div
+          className="flex gap-1 cursor-pointer sm:border-l-[1px] sm:border-gray-100 pl-1 sm:pl-2 md:pl-4 lg:pl-6"
+          onClick={goToProfile}
+        >
           <img
             src="/src/assets/profile-icon.svg"
             alt="profile"

@@ -5,6 +5,7 @@ import Register from "../features/register/pages/register";
 import Dashboard from "../features/dashboard/pages/dashboard";
 import Layout from "../layout";
 import DashboardForm from "../features/dashboard/pages/dashboardForm";
+import Profile from "../features/profile/pages/profile";
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
                 element: <DashboardForm />,
               },
             ],
+          },
+          {
+            path: "profile",
+            element: <Profile />,
           },
         ],
       },
