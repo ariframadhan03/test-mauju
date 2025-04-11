@@ -1,4 +1,5 @@
 import { Button } from "./button";
+import aksen from "../../assets/bg-aksen.svg";
 
 const LeftSide = () => {
   return (
@@ -12,7 +13,7 @@ const LeftSide = () => {
       </div>
 
       <img
-        src="/src/assets/bg-aksen.svg"
+        src={aksen}
         alt="aksen"
         className="absolute bottom-0 top-auto h-[12.5rem]"
       />
