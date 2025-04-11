@@ -41,7 +41,7 @@ const Login = () => {
     <div className="flex">
       <LeftSide />
 
-      <div className="w-full md:w-2/5 flex justify-center">
+      <div className="w-full md:w-2/5 flex justify-center mt-20 md:mt-0">
         <div className="m-auto">
           <div className="mb-10">
             <h3 className="text-[1.625rem] font-bold">Hello Again!</h3>
