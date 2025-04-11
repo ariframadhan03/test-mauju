@@ -6,6 +6,7 @@ import Dashboard from "../features/dashboard/pages/dashboard";
 import Layout from "../layout";
 import DashboardForm from "../features/dashboard/pages/dashboardForm";
 import Profile from "../features/profile/pages/profile";
+import RouterGuard from "./routerGuard";
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "",
-        element: <Layout />,
+        element: <RouterGuard component={Layout} />,
         children: [
           {
             path: "dashboard",
