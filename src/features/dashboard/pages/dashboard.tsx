@@ -22,6 +22,8 @@ import {
   AlertDialogTitle,
 } from "../../../components/ui/alert-dialog";
 import useDeleteDashboard from "../hooks/useDeleteDashboard";
+import editIcon from "../../../assets/edit.svg";
+import deleteIcon from "../../../assets/delete.svg";
 
 const Dashboard = () => {
   const { data } = useGetDashboard();
@@ -125,13 +127,13 @@ const Dashboard = () => {
                 <TableCell>{value.year}</TableCell>
                 <TableCell className="flex justify-end gap-1">
                   <img
-                    src="/src/assets/edit.svg"
+                    src={editIcon}
                     alt="edit"
                     className="cursor-pointer"
                     onClick={() => editHandler(value.id)}
                   />
                   <img
-                    src="/src/assets/delete.svg"
+                    src={deleteIcon}
                     alt="delete"
                     className="cursor-pointer"
                     onClick={() => openConfirmationModal(value.id)}

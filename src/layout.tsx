@@ -1,4 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
+import profileIcon from "./assets/profile-icon.svg";
 
 const Layout = () => {
   const navgate = useNavigate();
@@ -25,12 +26,7 @@ const Layout = () => {
           className="flex gap-1 cursor-pointer sm:border-l-[1px] sm:border-gray-100 pl-1 sm:pl-2 md:pl-4 lg:pl-6"
           onClick={goToProfile}
         >
-          <img
-            src="/src/assets/profile-icon.svg"
-            alt="profile"
-            width={48}
-            height={48}
-          />
+          <img src={profileIcon} alt="profile" width={48} height={48} />
 
           <div className="text-white m-auto hidden sm:block">
             <p className="text-sm font-bold">JASON LEE L.W</p>
